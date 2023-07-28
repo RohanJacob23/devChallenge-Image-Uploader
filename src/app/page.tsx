@@ -84,7 +84,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex items-center justify-center">
+    <main className="flex items-center justify-center p-3 md:p-0">
       {!isLoading && !loaded && (
         <ImageDropArea
           dragging={dragging}

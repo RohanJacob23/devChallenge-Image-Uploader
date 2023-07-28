@@ -19,7 +19,7 @@ export default function ImageDropArea({
   handleFileInput,
 }: ImageDropAreaProps) {
   return (
-    <div className="flex flex-col items-center w-[25rem] h-[29rem] bg-white shadow-md rounded-lg py-9">
+    <div className="flex flex-col items-center w-64 md:w-[25rem] md:h-[29rem] bg-white shadow-md rounded-lg py-9">
       <h1 className="text-lg text-[#4F4F4F] font-medium mb-4">
         Upload your Image
       </h1>
@@ -29,9 +29,9 @@ export default function ImageDropArea({
       </p>
 
       <div
-        className={`flex flex-col items-center w-[21rem] h-[13.68rem] bg-[#F6F8FB] border ${
+        className={`flex flex-col items-center md:w-[21rem] md:h-[13.68rem] bg-[#F6F8FB] border ${
           dragging ? "border-red-500" : "border-[#97BEF4]"
-        } border-dashed rounded-xl`}
+        } border-dashed rounded-xl px-6 py-3`}
         onDrop={(e) => handleDrop(e)}
         onDragOver={(e) => handleDragOver(e)}
         onDragLeave={() => setDragging(false)}
@@ -61,7 +61,7 @@ export default function ImageDropArea({
         type="file"
         name="file"
         id="file"
-        accept=".png,.jpeg"
+        accept=".jpg,.png,.jpeg"
         className="hidden"
         onChange={(e) => handleFileInput(e)}
       />
